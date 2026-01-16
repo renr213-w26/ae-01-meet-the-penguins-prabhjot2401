@@ -1,25 +1,27 @@
 ---
 title: "AE 01: Meet the penguins"
+author: "Prabhjot Singh"
+format: "html"
 ---
 
 For this application exercise, we'll use the **tidyverse** and **palmerpenguins** packages.
 
 ```{r}
 #| label: load-packages
+#| echo: true
 
 library(tidyverse)
 library(palmerpenguins)
 ```
 
-The dataset we will visualize is called `penguins`.
-Let's `glimpse()` at it.
+The dataset we will visualize is called `penguins`. Let's `glimpse()` at it.
 
 -   **Your turn:** Replace `#add code here` with the code for "glimpse"ing at the data `penguins` data frame – `glimpse(penguins)`. Render the document and view the output.
 
 ```{r}
 #| label: glimpse-penguins
 
-# add code here
+glimpse(penguins)
 ```
 
 -   **Demo:** First, replace the blank below with the number of rows in the `penguins` data frame based on the output of the chunk below. Then, replace it with "inline code" and render again.
@@ -27,10 +29,14 @@ Let's `glimpse()` at it.
 ```{r}
 #| label: nrow-penguins
 
-nrow(penguins)
+num_penguins <- nrow(penguins)
+
+library(glue)
+glue("There are {num_penguins} in the `penguins` data frame")
+
 ```
 
-There are \_\_\_ penguins in the `penguins` data frame.
+There are 344 in the `penguins` data frame.
 
 ```{r}
 x <- 2
